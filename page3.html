@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html>
+<title>WhitneyOReardon DigiFab</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+
+  <a href="index.html" class="w3-bar-item w3-button w3-blue-gray"><i class="fa fa-home w3-margin-right"></i>Home</a>
+
+  <a href="aboutme.html" class="w3-bar-item w3-button w3-hide-small">About Me</a>
+
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Weekly Assignments <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="page1.html" class="w3-bar-item w3-button">1. Project Management</a>
+      <a href="page2.html" class="w3-bar-item w3-button">2. Laser Cutting</a>
+      <a href="page3.html" class="w3-bar-item w3-button">3. Additive Manufacturing</a>
+    </div>
+    </div>
+ </div>
+
+  <!-- Navbar on small screens (not functional)
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#work" class="w3-bar-item w3-button">Work</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div> -->
+
+</div>
+
+
+<!-- Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="images/week_3/p3title_pic.jpg" alt="Fusion screenshot" style="max-width:100%;height=auto">
+</div>
+
+<div class="w3-container w3-padding-48 w3-center w3-theme-l1">
+    <h1>Week 3 | Additive Manufacturing</h1>
+</div>
+
+
+<!-- Main body -->
+
+<div class="w3-cell-row">
+
+    <div class="w3-container w3-theme-l5 w3-cell" style="width:15%;">
+    </div>
+
+    <!-- middle section -->
+    <style>
+        .img-container {text-align: center;}
+        div.a {text-indent: 50px;}
+    </style>
+
+
+    <div class="w3-cell w3-container w3-padding-48 w3-theme-l5">
+
+    <h3>Contents</h3>
+    <div class="a">
+        <a href="#part_1"><h4>Part 1: Using Parametric Design</h4></a>
+        <a href="#part_2"><h4>Part 2: Designing the Radioactive Symbol</h4></a>
+        <a href="#part_3"><h4>Part 3: Designing the Chemical Symbol</h4></a>
+        <a href="#part_4"><h4>Part 4: 3D Printing</h4></a>
+        <a href="#part_5"><h4>Design Files</h4></a>
+    </div>
+
+    <a id="part_1"><br><br></a>
+    <h3>Using Parametric Design</h3>
+    <p>Before this class, I had used Fusion for a variety of projects, so I was comfortable navigating the software. However, I did not have a great understaning of the  parameters or constraints in Fusion, so I was often confused and frustrated when trying to make sketches with them. For the first part of this assignment I practiced using parameters so that I could get a better idea of their functions and capabilities.
+    <br><br>I began by sketching some random shapes. Then, with some constraints automatically applied, I manipulated the size of the circle to see how the others would be affected.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3Fusion3.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3Fusion4.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>Next, I tried removing all the constraints, just to see what would happen. Then, I added the coincident and parallel features back in.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3Fusion5.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3Fusion6.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>I noticed that two sides of the rectangle were not connecting, so I added a coincedent there.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3Fusion7.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3Fusion8.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>Then, I made three sides of the rectangle tangent to the circle, and decided to move a diagonal line to  the midpoint of the rectangle's bottom side.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3Fusion9.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3Fusion10.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>Next, I worked on fixing the lines in place so that they could not be rearranged. Finally, I extruded them.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3Fusion11.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3Fusion12.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3Fusion13.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+
+    <a id="part_2"><br><br></a>
+    <h3>Designing the Radioactive Symbol</h3>
+    <p>By following the class tutorial instructions, I replicated the radioactive symbol in Fusion. I began by sketching a circle and extruding it. Then, I made another sketch on top of that form.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3radioactive1.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3radioactive3.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>I added some cicles and a hexagon to the sketch.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3radioactive4.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3radioactive5.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>Here, I aligned the hexagon with the horizontal axis by using the horazontal constraint, and made it into a construction line so that it would not show up in my final design.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3radioactive7.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>Then I added lines radiating from every vertex of the hexagon. To space these lines equally, I used construction lines to draw another hexagon around the radiating lines, and added constraints to make all of the hexagon's sides equal.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3radioactive8.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3radioactive9.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3radioactive10.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>Once I drew another small circle, the sketch was ready to extrude. </p>
+        <div class="img-container">
+        <img src="images/week_3/p3radioactive11.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3radioactive13.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3radioactive12.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>Lastly, I added color, using the appearance feature.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3radioactive14.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3radioactive15.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+
+    <a id="part_3"><br><br></a>
+    <h3>Designing the Chemical Symbol</h3>
+    <p>For the next part of this assignment, I decided to model the chemical symbol. I began this model just like the radioactive symbol, by extruding a circle and drawing another sketch on top. After that, I moved on to the details of this particular design.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3chemicalEx.jpg" alt="chemical symbol" style="max-width:100%;height=auto">
+        </div>
+    <br>
+    <p>I noticed that the symbol was essentialy composed of three branches. So, I drew some construction lines, and equally spaced them, to help guide my drawing.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3chemical1.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3chemical2.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+    </div>
+    <br>
+    <p>Finding a good way to draw the stems of each branch was a little tricky. I tried a few different methods, such as using the rectangle tool and rotating it, but eventually I found that the simplest way to do it was to connect the central and outer circles with two lines. Also, I added some shorther construction lines to help even out the stem lines. Some constraints were automatically applied to this shape, and I discovered that the movement of one line was mirrored on the other.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3chemical3.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3chemical4.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+     </div>
+    <br>
+    <p>Using the "Circular Pattern" tool, I duplicated and revolved the stem part of the design around the central axis twice to match up with the other radiating circles. After doing this, I realized that I could have used the "Circular Pattern" tool from the start, and then I would have only needed to draw one branch and fewer construction lines.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3chemical5.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3chemical6.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+    </div>
+    <br>
+    <p>Regardless, I moved on to my next step, which was to add the other little lines and circles shown in the chemical symbol design. I had to lock a couple of the lines to keep them fixed in their spots.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3chemical7.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3chemical8.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3chemical9.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+    </div>
+    <br>
+    <p>By then, my sketch was finished. I was ready to select parts of the design and extrude them. After this, I compared my model to the original chemical symbol image.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3chemical10.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3chemical11.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+    </div>
+    <br>
+    <p>After looking at the two symbols side by side, I noticed that the radiating circles on mine were a bit small. So, I went back to the sketch and enlarged them.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3chemical12.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3chemical13.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+    </div>
+    <br>
+    <p>Afterward, I changed the color to make it look nice, and finally, I exported it as an STL file.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3chemical14.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3chemical15.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+
+    <a id="part_4"><br><br></a>
+    <h3>3D Printing</h3>
+    <p>Once I hade the STL file, I imported it into PrusaSlicer. I set the layer height to be .20 mm and the infill to 15%. In addition, I added a color change so that the raised part of the 3D model could be a different color from the base.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3print1.jpg" alt="chemical symbol" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3print2.jpg" alt="chemical symbol" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3print3.jpg" alt="chemical symbol" style="max-width:45%;height=auto">
+     </div>
+    <br>
+    <p>I exported the g-code to an SD card and inserted that card in into a Prusa MK3.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3print4.jpg" alt="chemical symbol" style="max-width:45%;height=auto">
+    </div>
+    <br>
+    <p>The machine preheated before unloading the previous filament. Then, I loaded a spool of yellow PLA.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3print5.jpg" alt="chemical symbol" style="max-width:35%;height=auto">
+        <img src="images/week_3/p3print6.jpg" alt="chemical symbol" style="max-width:35%;height=auto">
+     </div>
+    <br>
+    <p>Once I selected my model's filename, under "Print from SD", I began the acual print. It took a little under a half hour to print altogether.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3print7.jpg" alt="chemical symbol" style="max-width:45%;height=auto">
+     </div>
+    <br>
+    <p>At about 20 minutes in, the machine prompted a color change. I had never tried doing a color change on a Prusa MK3 printer before, so this part was new to me.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3print8.jpg" alt="chemical symbol" style="max-width:35%;height=auto">
+        <img src="images/week_3/p3print9.jpg" alt="chemical symbol" style="max-width:35%;height=auto">
+     </div>
+    <br>
+    <p>Overall, the print went very smoothly. There were no major issues throughout the process.</p>
+        <div class="img-container">
+        <img src="images/week_3/p3print10.jpg" alt="chemical symbol" style="max-width:45%;height=auto">
+        <img src="images/week_3/p3print11.jpg" alt="chemical symbol" style="max-width:36%;height=auto">
+        </div>
+
+    <a id="part_5"><br><br></a>
+    <h3>Design Files</h3>
+        <div class="a">
+            <a href="files/OReardon_Week3_DesignFiles.zip" download="OReardon-Week3-DesignFiles.zip">OReardon-Week3-DesignFiles.zip</a>
+        </div>
+
+
+    </div>
+
+
+    <!-- Right Margin -->
+    <div class="w3-container w3-theme-l5 w3-cell" style="width:15%;">
+    </div>
+
+    </div>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-l4 w3-center">
+    <br>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+  <div style="position:relative;bottom:50px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-blue-gray w3-hide-small">Go To Top</span>
+    <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+</body>
+</html>
 
