@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html>
+<title>WhitneyOReardon DigiFab</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
 
+
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+
+  <a href="index.html" class="w3-bar-item w3-button w3-blue-gray"><i class="fa fa-home w3-margin-right"></i>Home</a>
+
+  <a href="aboutme.html" class="w3-bar-item w3-button w3-hide-small">About Me</a>
+
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Weekly Assignments <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="page1.html" class="w3-bar-item w3-button">1. Project Management</a>
+      <a href="page2.html" class="w3-bar-item w3-button">2. Laser Cutting</a>
+      <a href="page3.html" class="w3-bar-item w3-button">3. Additive Manufacturing</a>
+      <a href="page4.html" class="w3-bar-item w3-button">4. CAD, CAM, Plants, & Prusas</a>
+    </div>
+    </div>
+ </div>
+
+  <!-- Navbar on small screens (not functional)
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#work" class="w3-bar-item w3-button">Work</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div> -->
+
+</div>
+
+
+<!-- Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="images/week_4/p4title.jpg" alt="Fusion screenshot" style="max-width:100%;height=auto">
+</div>
+
+<div class="w3-container w3-padding-48 w3-center w3-theme-l1">
+    <h1>Week 4 | CAD, CAM, Plants, & Prusas</h1>
+</div>
+
+
+<!-- Main body -->
+
+<div class="w3-cell-row">
+
+    <div class="w3-container w3-theme-l5 w3-cell" style="width:15%;">
+    </div>
+
+    <!-- middle section -->
+    <style>
+        .img-container {text-align: center;}
+        div.a {text-indent: 50px;}
+    </style>
+
+
+    <div class="w3-cell w3-container w3-padding-48 w3-theme-l5">
+
+    <h3>Contents</h3>
+    <div class="a">
+        <a href="#part_1"><h4>Part 1: Slicing the Planter</h4></a>
+        <a href="#part_2"><h4>Part 2: Printing the Planter</h4></a>
+        <a href="#part_3"><h4>Part 3: Designing the Watering Can</h4></a>
+        <a href="#part_4"><h4>Design Files</h4></a>
+    </div>
+
+    <a id="part_1"><br><br></a>
+    <h3>Slicing the Planter</h3>
+    <p>For the first part of this week's assignment I created a 3D printed planter, using vase mode in PrusaSlicer. After designing the body of the planter in Fusion360, I imported it into PrusaSlicer. Here, I made the layer height to be .20 mm and checked to make sure that I was using Generic PLA filament and an MK3 printer.</p>
+        <div class="img-container">
+        <img src="images/week_4/p4slicer1.jpg" alt="screenshot PrusaSlicer" style="max-width:80%;height=auto">
+        </div>
+    <br>
+    <p>I then changed the Print Settings, in the upper, central bar, by checking off the "Spiral vase" box. This made it so that the printer would extrude a continuous "wrap-around" layer, with one perimeter and no infill or top layer. I also decided to make the bottom of the planter a bit thicker, so I added several more solid layers to the bottom.</p>
+        <div class="img-container">
+        <img src="images/week_4/p4slicer2.jpg" alt="screenshot PrusaSlicer" style="max-width:80%;height=auto">
+        <img src="images/week_4/p4slicer3.jpg" alt="screenshot PrusaSlicer" style="max-width:80%;height=auto">
+        <img src="images/week_4/p4slicer4.jpg" alt="screenshot PrusaSlicer" style="max-width:80%;height=auto">
+        </div>
+    <br>
+    <p>In addition, I changed the bottom fill pattern to the Octogram spiral because I liked how that pattern looked.</p>
+        <div class="img-container">
+        <img src="images/week_4/p4slicer5.jpg" alt="screenshot PrusaSlicer" style="max-width:80%;height=auto">
+        <img src="images/week_4/p4slicer6.jpg" alt="screenshot PrusaSlicer" style="max-width:80%;height=auto">
+        </div>
+    <br>
+    <p>Lastly, I edited the scale of the planter to be 10 cm wide and 8 cm tall. This object had an estimated printing time of about 3 hours. I exported the g-code, then moved on to using the 3D printer</p>
+        <div class="img-container">
+        <img src="images/week_4/p4slicer7.jpg" alt="screenshot PrusaSlicer" style="max-width:80%;height=auto">
+        <img src="images/week_4/p4slicer8.jpg" alt="screenshot PrusaSlicer" style="max-width:80%;height=auto">
+        </div>
+
+    <a id="part_2"><br><br></a>
+    <h3>Printing the Planter</h3>
+    <p>To print the planter, I first preheated and unloaded the last filament. Then I inserted a new filament color. Next, I selected my file name and began the print. It took a long time, maybe about an hour, for the solid layers of the base to print.</p>
+        <div class="img-container">
+        <img src="images/week_4/p4print1.jpg" alt="3D printer" style="max-width:35%;height=auto">
+        <img src="images/week_4/p4print2.jpg" alt="3D printer" style="max-width:35%;height=auto">
+        <br><br>
+        <img src="images/week_4/p4print3.jpg" alt="3D printer" style="max-width:35%;height=auto">
+        <img src="images/week_4/p4print4.2.jpg" alt="3D printer" style="max-width:35%;height=auto">
+        </div>
+    <br>
+    <p>The print ran very smoothly. When it was done, I took the bed off the machine, before removing the planter. I like how this print turned out, especially the pattern on the bottom.</p>
+        <div class="img-container">
+        <img src="images/week_4/p4print5.jpg" alt="3D Printer planter" style="max-width:35%;height=auto">
+        <img src="images/week_4/p4print6.jpg" alt="3D Printer planter botton view" style="max-width:35%;height=auto">
+        </div>
+
+    <a id="part_3"><br><br></a>
+    <h3>Designing the Watering Can</h3>
+    <p>The other aspect of this week's assignment was to design a watering can in Fusion 360.<br><br>I began by sketching and extruding an oval. Then, I sketched a few more lines that would help me create a new construction plane at an angle. On this plane, I sketched a circle, that would serve as the arm of the watering can, and I extruded it in two different directions.</p>
+        <div class="img-container">
+        <img src="images/week_4/p4fusion1.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_4/p4fusion2.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>From the face at the end of the spout, I extended another construction plane. I projected the center point of the circle below onto the new construction plane. This helped me draw a new circle, one that was a little bit bigger than the one below. After that, I used the Loft function to connect the smaller circle to the bigger circle, thereby creating the head of the spout.</p>
+        <div class="img-container">
+        <img src="images/week_4/p4fusion3.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_4/p4fusion4.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>Next, I shelled out the whole model and left an opening at the top of the can. Then, I sketched circles on the head of the spout, to serve as holes. To make this part of the design, I first drew four circles in a line, starting at the center and going up. Next, I used the Circular Pattern tool on a few of those circles to make duplicates that were equally spaced.</p>
+        <div class="img-container">
+        <img src="images/week_4/p4fusion5.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_4/p4fusion6.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>After finishing the sketch, I extruded all of those small circles downward to cut through the width of the model. Lastly, I added a fillet to the rim of the can.</p>
+        <div class="img-container">
+        <img src="images/week_4/p4fusion7.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_4/p4fusion8.jpg" alt="Fusion 360 screenshot" style="max-width:45%;height=auto">
+        </div>
+    <br>
+    <p>Here, is my finished model!</p>
+        <div class="img-container">
+        <img src="images/week_4/p4fusion9.jpg" alt="Fusion 360 screenshot" style="max-width:80%;height=auto">
+        </div>
+
+    <a id="part_4"><br><br></a>
+    <h3>Design Files</h3>
+        <div class="a">
+            <a href="files/OReardon_Week4_DesignFiles.zip" download="OReardon-Week4-DesignFiles.zip">OReardon-Week4-DesignFiles.zip</a>
+        </div>
+
+
+    </div>
+
+
+    <!-- Right Margin -->
+    <div class="w3-container w3-theme-l5 w3-cell" style="width:15%;">
+    </div>
+
+    </div>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-l4 w3-center">
+    <br>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+  <div style="position:relative;bottom:50px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-blue-gray w3-hide-small">Go To Top</span>
+    <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+</body>
+</html>
