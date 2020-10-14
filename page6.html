@@ -27,6 +27,7 @@
       <a href="page3.html" class="w3-bar-item w3-button">3. Additive Manufacturing</a>
       <a href="page4.html" class="w3-bar-item w3-button">4. CAD, CAM, Plants, & Prusas</a>
       <a href="page5.html" class="w3-bar-item w3-button">5. Subtractive Manufacturing</a>
+      <a href="page6.html" class="w3-bar-item w3-button">6. Slicer Mini</a>
     </div>
     </div>
  </div>
@@ -45,11 +46,11 @@
 
 <!-- Header -->
 <div class="w3-display-container w3-animate-opacity">
-  <img src="images/week_3/p3title_pic.jpg" alt="Fusion screenshot" style="max-width:100%;height=auto">
+  <img src="images/week_7/p7title.jpg" alt="Cardboard bowl" style="max-width:100%;height=auto">
 </div>
 
 <div class="w3-container w3-padding-48 w3-center w3-theme-l1">
-    <h1>Week 5 | Subtractive Manufacturing</h1>
+    <h1>Week 7 | Slicer Mini</h1>
 </div>
 
 
@@ -66,142 +67,120 @@
         div.a {text-indent: 50px;}
     </style>
 
-
     <div class="w3-cell w3-container w3-padding-48 w3-theme-l5">
+
+    <p>In this assignment I used Slicer for Fusion 360 to create a cardboard model of an object.</p>
+    <br>
 
     <h3>Contents</h3>
     <div class="a">
-        <a href="#part_1"><h4>1) About CNC Routers</h4></a>
-        <a href="#part_2"><h4>2) Using the Axiom</h4></a>
-        <a href="#part_3"><h4>3) CNC Project</h4></a>
-        <a href="#part_4"><h4>Design Files</h4></a>
+        <a href="#part_1"><h4>1) 3D Modeling</h4></a>
+        <a href="#part_2"><h4>2) Using Slicer for Fusion 360</h4></a>
+        <a href="#part_3"><h4>3) Preparing files in Illustrator</h4></a>
+        <a href="#part_4"><h4>4) Assembling my Object</h4></a>
+        <a href="#part_5"><h4>Design Files</h4></a>
     </div>
 
     <a id="part_1"><br><br></a>
-    <h3>About CNC Routers</h3>
-    <p></p>
+    <h3>3D Modeling</h3>
+    <p>I decided to make a small bowl for this week's project. In Tinkercad, I started with a semi-sphere and added a flat side to make the base. After rotating the bowl to be right side up, I decided that I wanted it to have a curved lip. To do this, I sized a ring to be same outer diameter as the semi-sphere, then aligned it to go at the lip of the bowl.</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="Axiom CNC machine" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7tinker1.jpg" alt="Tinkercad screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_7/p7tinker2.jpg" alt="Tinkercad screenshot" style="max-width:45%;height=auto">
+        <br><br><img src="images/week_7/p7tinker3.jpg" alt="Tinkercad screenshot" style="max-width:45%;height=auto">
         </div>
     <br>
-    <p></p>
+    <p>Next, I needed to hollow out the bowl, so I used a smaller, half sphere shape as a hole tool. I grouped these items together and exported it as an STL file.</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="Axiom CNC machine" style="max-width:80%;height=auto">
-        </div>
-    <br>
-    <p></p>
-        <div class="img-container">
-        <img src="images/week_5/" alt="Axiom CNC machine" style="max-width:80%;height=auto">
-        </div>
-    <br>
-    <p></p>
-        <div class="img-container">
-        <img src="images/week_5/" alt="Axiom CNC machine" style="max-width:80%;height=auto">
-        </div>
-    <br>
-    <p></p>
-        <div class="img-container">
-        <img src="images/week_5/" alt="Axiom CNC machine" style="max-width:80%;height=auto">
-        </div>
-    <br>
-    <p></p>
-        <div class="img-container">
-        <img src="images/week_5/" alt="Axiom CNC machine" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7tinker4.jpg" alt="Tinkercad screenshot" style="max-width:45%;height=auto">
+        <img src="images/week_7/p7tinker5.jpg" alt="Tinkercad screenshot" style="max-width:45%;height=auto"><br><br>
+        <img src="images/week_7/p7tinker6.jpg" alt="Tinkercad screenshot" style="max-width:45%;height=auto">
         </div>
 
     <a id="part_2"><br><br></a>
-    <h3>Using the Axiom</h3>
-    <p></p>
+    <h3>Using Slicer for Fusion 360</h3>
+    <p>I imported the 3D model into Slicer for Fusion 360. This program easily generates two dimensional cutting files out of 3D models. These 2D parts, or "slices", can then be assembeled by hand to make a mock up of the 3D object. <br><br>In this window, I checked the "Object Size" so that the bowl had an 8 inch diameter.</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="screenshot VCarve" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7slicer1.jpg" alt="Slicer for Fusion screenshot" style="max-width:80%;height=auto">
+        </div>
+    <p>I added new Manufacturing Settings for the cardboard material that I planned on using. Its dimensions were 26" x 38" x .16". Then, I selected this material in the Manufacturing Settings dropdown menu.</p>
+        <div class="img-container">
+        <img src="images/week_7/p7slicer2.jpg" alt="Slicer for Fusion screenshot" style="max-width:80%;height=auto"><br><br>
+        <img src="images/week_7/p7slicer3.jpg" alt="Slicer for Fusion screenshot" style="max-width:80%;height=auto">
         </div>
     <br>
-    <p></p>
+    <p>Under Construction Technique, I chose "Interlocked Slices" which presented me with a grid-like version of my model. Also, I decided to add a slight slant to the slices on one of the axes for visual effect.</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="screenshot VCarve" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7slicer4.jpg" alt="Slicer for Fusion screenshot" style="max-width:80%;height=auto"><br><br>
+        <img src="images/week_7/p7slicer5.jpg" alt="Slicer for Fusion screenshot" style="max-width:80%;height=auto">
         </div>
     <br>
-    <p></p>
+    <p>This is what the plans for my model looked like after using Slicer for Fusion 360.</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="screenshot VCarve" style="max-width:80%;height=auto">
-        </div>
-    <br>
-    <p></p>
-        <div class="img-container">
-        <img src="images/week_5/" alt="screenshot VCarve" style="max-width:80%;height=auto">
-        </div>
-    <br>
-    <p></p>
-        <div class="img-container">
-        <img src="images/week_5/" alt="screenshot VCarve" style="max-width:80%;height=auto">
-        </div>
-    <br>
-    <p></p>
-        <div class="img-container">
-        <img src="images/week_5/" alt="screenshot VCarve" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7slicer6.jpg" alt="Slicer for Fusion screenshot" style="max-width:80%;height=auto">
         </div>
 
     <a id="part_3"><br><br></a>
-    <h3>CNC Project</h3>
-    <p></p>
+    <h3>Preparing files in Illustrator</h3>
+    <p>After downloading the vector file, generated by Slicer for Fusion 360, I used Illustrator to prepare the file for laser cutting. I changed the canvas dimensions to be the same size as a sheet of cardboard. Then, I ungrouped everything, and regrouped each slice with its own text. That way I could move the slices separately, but with their respective numbers and texts attached.</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="Fusion 360 screenshot" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7illustrator1.jpg" alt="Illustrator screenshot" style="max-width:80%;height=auto"><br><br>
+        <img src="images/week_7/p7illustrator2.jpg" alt="Illustrator screenshot" style="max-width:80%;height=auto">
         </div>
     <br>
-    <p></p>
+    <p>Next, I began nesting the slices, so that they took up as little space, all together, as possible.</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="Fusion 360 screenshot" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7illustrator3.jpg" alt="Illustrator screenshot" style="max-width:80%;height=auto"><br><br>
+        <img src="images/week_7/p7illustrator4.jpg" alt="Illustrator screenshot" style="max-width:80%;height=auto">
         </div>
     <br>
-    <p></p>
+    <p>I added a line, to cut the scrap parts off from the usable cardboard.</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="Fusion 360 screenshot" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7illustrator5.jpg" alt="Illustrator screenshot" style="max-width:80%;height=auto">
         </div>
     <br>
-    <p></p>
+    <p> After that, I separated the text from the slice outlines and put them on different layers. This way, I could use different laser settings for the text.</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="Fusion 360 screenshot" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7illustrator6.jpg" alt="Illustrator screenshot" style="max-width:80%;height=auto"><br><br>
+        <img src="images/week_7/p7illustrator7.jpg" alt="Illustrator screenshot" style="max-width:80%;height=auto"><br><br>
+        <img src="images/week_7/p7illustrator8.jpg" alt="Illustrator screenshot" style="max-width:80%;height=auto">
+        </div>
+
+    <a id="part_2"><br><br></a>
+    <h3>Assembling my Object</h3>
+    <p>In the Lab, I found some scrap cardboard that was pretty much the exact size of my job. </p>
+        <div class="img-container">
+        <img src="images/week_7/p7laser1.jpg" alt="Laser cut cardboard" style="max-width:60%;height=auto">
         </div>
     <br>
-    <p></p>
+    <p>I first laser cut the text at a low vector setting; about 50% speed, 20% power, and 80% frequency. Then, I cut the slice outlines with higher vector settings.</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="Fusion 360 screenshot" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7laser2.jpg" alt="Laser cut cardboard" style="max-width:60%;height=auto">
         </div>
     <br>
-    <p></p>
+    <p>I laid out all of the slices, and sorted them by if they had notches on their left or right side. This helped me to visualize which parts were similar and how they should be put together. The longest slices made up the widest part of the bowl, so I assembled those first.</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="Fusion 360 screenshot" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7laser3.jpg" alt="Laser cut cardboard" style="max-width:45%;height=auto">
+        <img src="images/week_7/p7laser4.jpg" alt="Laser cut cardboard" style="max-width:45%;height=auto">
         </div>
     <br>
-    <p></p>
+    <p>I pieced together the rest, knowing that the slices became smaller as they got closer to the edges.</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="Fusion 360 screenshot" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7laser5.jpg" alt="Laser cut cardboard bowl" style="max-width:45%;height=auto"><br><br>
+        <img src="images/week_7/p7laser6.jpg" alt="Laser cut cardboard bowl" style="max-width:45%;height=auto">
+        <img src="images/week_7/p7laser7.jpg" alt="Laser cut cardboard bowl" style="max-width:45%;height=auto">
         </div>
     <br>
-    <p></p>
+    <p>Here is my finished product!</p>
         <div class="img-container">
-        <img src="images/week_5/" alt="Fusion 360 screenshot" style="max-width:80%;height=auto">
-        </div>
-    <br>
-    <p></p>
-        <div class="img-container">
-        <img src="images/week_5/" alt="Fusion 360 screenshot" style="max-width:80%;height=auto">
-        </div>
-    <br>
-    <p></p>
-        <div class="img-container">
-        <img src="images/week_5/" alt="Fusion 360 screenshot" style="max-width:80%;height=auto">
-        </div>
-    <br>
-    <p></p>
-        <div class="img-container">
-        <img src="images/week_5/" alt="Fusion 360 screenshot" style="max-width:80%;height=auto">
+        <img src="images/week_7/p7laser8.jpg" alt="Laser cut cardboard bowl" style="max-width:45%;height=auto">
+        <img src="images/week_7/p7laser9.jpg" alt="Laser cut cardboard bowl" style="max-width:45%;height=auto">
         </div>
 
     <a id="part_4"><br><br></a>
     <h3>Design Files</h3>
         <div class="a">
-            <a href="files/" download="OReardon-Week#-DesignFiles.zip"></a>
+            <a href="files/OReardon_Week7_DesignFiles.zip">OReardon_Week7_DesignFiles.zip</a>
         </div>
 
     </div>
