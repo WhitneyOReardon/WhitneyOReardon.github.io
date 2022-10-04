@@ -1,85 +1,212 @@
 <!DOCTYPE html>
-<html>
-<title>WhitneyOReardon DigiFab</title>
+<html lang="en">
+<head>
+<title>Whitney O'Reardon Portfolio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<body id="myPage">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="index.js"></script>
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: inherit;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #919191;
+  color: #f1f1f1;
+}
+
+/* On mouse-over of dropdown text*/
+.sidenav a:hover, .dropdown-btn:hover {
+  color: black;
+  background-color: #f1f1f1;
+}
+
+/* Dropdown container (hidden by default)*/
+.dropdown-container {
+  display: none;
+  font-weight: normal;
+}
 
 
+</style>
+</head>
 
-<!-- Navbar (not functional yet)-->
-<div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
 
-  <a href="index.html" class="w3-bar-item w3-button w3-blue-gray"><i class="fa fa-home w3-margin-right"></i>Home</a>
 
-  <a href="aboutme.html" class="w3-bar-item w3-button w3-hide-small">About Me</a>
-
-    <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button" title="Notifications">Weekly Assignments <i class="fa fa-caret-down"></i></button>
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-      <a href="page1.html" class="w3-bar-item w3-button">1. Project Management</a>
-      <a href="page2.html" class="w3-bar-item w3-button">2. Laser Cutting</a>
-      <a href="page3.html" class="w3-bar-item w3-button">3. Additive Manufacturing</a>
-      <a href="page4.html" class="w3-bar-item w3-button">4. CAD, CAM, Plants, & Prusas</a>
-      <a href="page5.html" class="w3-bar-item w3-button">5. Subtractive Manufacturing</a>
-      <a href="page6.html" class="w3-bar-item w3-button">6. Slicer Mini</a>
-      <a href="page7.html" class="w3-bar-item w3-button">7. Slicer Big</a>
-      <a href="page8.html" class="w3-bar-item w3-button">8. Vinyl Cutting</a>
-      <a href="page9.html" class="w3-bar-item w3-button">9. Electronics 1</a>
-      <a href="page10.html" class="w3-bar-item w3-button">10. Electronics 2</a>
-
+<!-- Sidebar/menu -->
+<nav class="sidenav w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center"><b>Whitney<br>O'Reardon</b></h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <button class="dropdown-btn w3-bar-item w3-button w3-ripple">PORTFOLIO</button>
+    <div class="dropdown-container">
+        <a href="/drawings.html" onclick="w3_close()">drawing</a>
+        <a href="/sculpture.html" onclick="w3_close()">sculpture</a>
+        <a href="/technology.html" onclick="w3_close()">technology</a>
     </div>
+  <a href="/aboutme.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="/resume.html" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>
+  <a href="/aboutme.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Whitney O'Reardon</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <!-- <h4><b>About Me</b></h4> -->
+    <img src="/images/Whitney-OReardon-profile.jpg" alt="Me" class="w3-image w3-padding-64" width="300" oncontextmenu="return false">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>Whitney O'REARDON</h4>
+      <p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <hr class="w3-opacity">
+      <h4 class="w3-padding-16">Technical Skills</h4>
+      <p class="w3-wide">Digital </p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:95%">95%</div>
+      </div>
+      <p class="w3-wide">Web Design</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide">Photoshop</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:80%">80%</div>
+      </div>
+        <p><a href="/files/Whitney_OReardon_Resume-3.pdf" download><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button></a></p>
+      <hr class="w3-opacity">
+
+      </div>
     </div>
- </div>
 
-  <!-- Navbar on small screens (not functional)
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#team" class="w3-bar-item w3-button">Team</a>
-    <a href="#work" class="w3-bar-item w3-button">Work</a>
-    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
-    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    <a href="#" class="w3-bar-item w3-button">Search</a>
-  </div> -->
-
-</div>
-
-<!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-  <img src="images/aboutMe/Panoramic.jpg" alt="trees" style="max-width:100%;height=auto">
-</div>
-
-<!-- About me area -->
-<div class="w3-container w3-padding-48 w3-theme-l5" id="team">
-    <div class="w3-quarter w3-center">
-        <h2>About Me</h2>
+  <!-- Contact section -->
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Contact Me</b></h4>
+      <p>mail: whitneyoreardon@gmail.com</p>
+      <form method="post">
+        <div class="w3-section">
+          <label>Name</label>
+          <input id="senderName" class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input id="senderEmail" class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input id="senderMessage" class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom" onclick="getData">Send Message</button>
+      </form>
     </div>
-    <div class="w3-third">
-        <p>My name is Whitney O'Reardon. I am a junior at Wheaton College, and I'm studying Visual Art and Art History. I have a passion for architecture and building things in general. I joined this class because I think it's really cool to learn new ways of making stuff! In addition, I work in the Makerspace on campus.</p>
-        <p> In my free time, I enjoy reading novels, listening to Broadway tunes, and watching Doctor Who. My favorite ice cream flavor is cookies 'n cream.</p>
-    </div>
-    <div class="w3-rest w3-padding-large w3-center">
-        <img class="w3-circle w3-card w3-animate-opacity" src="images/aboutMe/IMG_6923.jpg" alt="3D printed elephant" style="max-width:60%;height=auto">
-    </div>
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-container w3-theme-l4 w3-center">
-    <br>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-
-  <div style="position:relative;bottom:50px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-blue-gray w3-hide-small">Go To Top</span>
-    <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
-    <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
-</footer>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+
+      <div class="w3-third">
+        <h3>BLOG POSTS</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Lorem</span><br>
+            <span>Sed mattis nunc</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Ipsum</span><br>
+            <span>Praes tinci sed</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>POPULAR TAGS</h3>
+        <p>
+          <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
 
 </body>
 </html>
-
