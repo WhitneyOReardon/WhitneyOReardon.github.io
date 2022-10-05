@@ -9,10 +9,84 @@
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="index.js"></script>
 
+
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    p{font-family: "", sans-serif}
 
-/* Style the sidenav links and the dropdown button */
+img{vertical-align: middle;}
+
+/* scroll feature*/
+.row{padding: 5px 15px 15px 15px;}
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+/* ---- slideshow gallery feature ----*/
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right & the "prev button" to the left */
+.next {right: 0}
+.prev {left: 0}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #333;
+  padding: 2px 16px;
+  color: white;
+}
+
+
+/*--Style the sidenav links and the dropdown button--*/
 .sidenav a, .dropdown-btn {
   padding: 6px 8px 6px 16px;
   text-decoration: inherit;
@@ -55,6 +129,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <nav class="sidenav w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
   <h3 class="w3-padding-64 w3-center"><b>Whitney<br>O'Reardon</b></h3>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <a href="/index.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
   <button class="dropdown-btn w3-bar-item w3-button w3-ripple">PORTFOLIO</button>
     <div class="dropdown-container">
         <a href="#" onclick="w3_close()">drawing</a>
@@ -80,11 +155,53 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-container w3-center" style="margin-left:300px">
 
-
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
 
-        <p><a href="/files/Whitney_OReardon_Resume-3.pdf" download><button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button></a></p>
+    <!-- Scroll Photos start -->
+    <br><br>
+    <div class="scrollmenu">
+        <div class="row" oncontextmenu="return false">
+        <img src="/images/Cityscape-2020-series-1.jpg" style="width: 90%" alt="Cityscape 2020, Part 1">
+        <img src="/images/Cityscape-2020-series-2.jpg" style="width: 90%" alt="Cityscape 2020, Part 2">
+        <img src="/images/Cityscape-2020-series-3.jpg" style="width: 90%" alt="Cityscape 2020, Part 3">
+        <img src="/images/Cityscape-2020-series-4.jpg" style="width: 90%" alt="Cityscape 2020, Part 4">
+        </div>
+    </div>
+    <p><b>Cityscape 2020:</b> A series inspired by the early weeks of Covid lockdown.</p>
+
+    <!--Gallery Photos start -->
+    <br><br><br>
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="/images/Cityscape-2020-series-1.jpg" style="width: 100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="/images/Cityscape-2020-series-2.jpg" style="width: 100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="/images/Cityscape-2020-series-3.jpg" style="width: 100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="/images/Cityscape-2020-series-4.jpg" style="width: 100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"><b>Cityscape 2020:</b> A series inspired by the early weeks of Covid lockdown.</p>
+      </div>
+
+    </div>
+
 </div>
 
 
@@ -102,14 +219,6 @@ function w3_close() {
   document.getElementById("myOverlay").style.display = "none";
 }
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
 
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -125,6 +234,36 @@ for (i = 0; i < dropdown.length; i++) {
       dropdownContent.style.display = "block";
     }
   });
+}
+
+/* For Slideshow Gallery */
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
 </script>
