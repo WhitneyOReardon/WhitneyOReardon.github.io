@@ -1,1 +1,281 @@
-hello world 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Whitney O'Reardon Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="index.js"></script>
+
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    p{font-family: "Raleway", sans-serif}
+
+
+@media only screen and (max-width: 600px) {
+  iframe{
+    max-width: 500px;
+    height: 400px;
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  #caption{
+    padding: 0px 100px;
+  }
+}
+
+img{vertical-align: middle;}
+
+/* scroll feature*/
+.row{padding: 10px 0px 10px 15px;}
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+/* ---- slideshow gallery feature ----*/
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right & the "prev button" to the left */
+.next {right: 0}
+.prev {left: 0}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #333;
+  padding: 2px 16px;
+  color: white;
+}
+
+
+/*--Style the sidenav links and the dropdown button--*/
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: inherit;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #919191;
+  color: #f1f1f1;
+}
+
+/* On mouse-over of dropdown text*/
+.sidenav a:hover, .dropdown-btn:hover {
+  color: black;
+  background-color: #f1f1f1;
+}
+
+/* Dropdown container (hidden by default)*/
+.dropdown-container {
+  display: none;
+  font-weight: normal;
+}
+
+
+</style>
+</head>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="sidenav w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center"><b>Whitney<br>O'Reardon</b></h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <a href="/index.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+  <button class="dropdown-btn w3-bar-item w3-button w3-ripple">PORTFOLIO</button>
+    <div class="dropdown-container">
+        <a href="/drawings.html" onclick="w3_close()">drawing</a>
+        <a href="#" onclick="w3_close()">sculpture</a>
+        <a href="/technology.html" onclick="w3_close()">technology</a>
+    </div>
+  <a href="/aboutme.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="/resume.html" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>
+  <a href="/aboutme.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Whitney O'Reardon</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-container w3-center w3-padding-24" style="margin-left:300px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+    <!-- Scroll Photos start -->
+    <h1>Senior Door Project</h1>
+    <div class="scrollmenu">
+        <div class="row" oncontextmenu="return false">
+        <img src="/images/Door-art-installation.jpg" style="width: 85%" alt="">
+        <img src="/images/Door-art-installation-1.JPG" style="width: 85%" alt="">
+        <img src="/images/Door-art-installation-2.JPG" style="width: 85%" alt="">
+        <img src="/images/Door-art-installation-3.JPG" style="width: 85%" alt="">
+        <img src="/images/Door-art-installation-4.JPG" style="width: 85%" alt="">
+        </div>
+    </div>
+
+    <div class="row"> <!-- use same alignment as 'row' class -->
+        <p id="caption" style="text-align: justify"><b>Senior Doors Project:</b> As a Visual Arts major, my capstone project involved collecting and repurposing old doors for a sculpture installation. This endeavor was a culmination of artistic exploration of the past four years and was presented in the Beard and Weil Galleries for the Class of 2022 Senior Exhibition, <i>@Capacity</i>. For this series, I was awarded the Miriam F. Carpenter Prize in Visual Art for best body of work in one area of Visual Art.</p>
+
+        <br>
+
+
+      <h1>Artist Statement</h1>
+        <p id="caption" style="text-align: left; font-size:18pt; ">My inner world is a state of negotiations between opposites such as past and future, rationality and intuition, and chaos and order. However, something that remains constant is my highly tactile process for making. The feeling of holding and transforming physical materials is essential to my creative practice. I believe that meaning is created through the act of doing. The act of drawing patterns, the act of chiseling wood, the act of hammering through a surface is meaningful because I do it.
+        <br><br>
+        Through the pairing of order and chaos in senseless patterns, I represent opposites, double meanings, and dual possibilities. Doors hold multiple significances as pathways/barriers, entrances/exits, choices/limitations, etc. I love the dual symbolism embedded in these structures, as it is a great way to explore aspects of my own identity.
+        <br><br>
+        I think a lot about contradictions, things that shouldn’t exist simultaneously, and yet do. One contradiction that I see in my own life is the presence of my intuitive, creative side and my interest in mathematics and strict logic. In creating my doors, I utilize multiple methods of making. Sometimes I begin transforming a door without knowing where I’m headed, other times I have detailed sketches drawn out in advance.
+        <br><br>
+        The ways I transform these doors reflect my interests in architecture, history, and geometry. With each door, I also draw on my lived experiences. Some are literal moments, like the memory of my childhood home being demolished, or are abstract thoughts I wrestle with, such as trying to make sense of the absurd. These discarded and repurposed doors also contain histories of their own which tie into my interactions with the world around me. I am drawn to both the architectural utility of doors and the mystery of what lies beyond. Through this medium, I create a forest filled with contradiction, deconstruction, and self-exploration in an attempt to make sense of my internal and external worlds.</p>
+
+
+      <div class="w3-padding-24">
+        <p>For an immersive, 3D veiwing experience please see below.<br> This is a shared exhibition and the descriptions for my doors are found on tabs 20, 21, and 22.</p>
+
+        <iframe loading="lazy" src="https://my.matterport.com/show/?play=1&share=0&wh=0&m=JqarbTHqDyc&sr=-2.28%2C.53&ss=17&tag=ZlkrQmIX2FT&pin-pos=5.91%2C.34%2C-8.32" width="853" height="480" frameborder="0" allowfullscreen allow="xr-spatial-tracking" ></ iframe>
+        <!-- simple URL https://my.matterport.com/show/?m=JqarbTHqDyc -->
+      </div>
+
+    </div>
+
+</div>
+
+
+<!-- End page content -->
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+/* For Slideshow Gallery */
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+</script>
+
+
+</body>
+</html>
