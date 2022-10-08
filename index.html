@@ -43,8 +43,12 @@ img{cursor: pointer}
   }
 }
 
+/*-- Slideshow container --*/
 
-/* Style the sidenav links and the dropdown button */
+
+
+
+/*--Style the sidenav links and the dropdown button--*/
 .sidenav a, .dropdown-btn {
   padding: 6px 8px 6px 16px;
   text-decoration: inherit;
@@ -115,7 +119,7 @@ img{cursor: pointer}
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
 
-  <!-- Photo grid -->
+    <!-- Photo grid
   <div class="row">
     <div class="column">
       <img src="/images/Cityscape-2020-series-3.jpg" style="width:100%" onclick="onClick(this)" alt="Cityscape 2020, Part 3" oncontextmenu="return false">
@@ -137,19 +141,31 @@ img{cursor: pointer}
       <img src="/images/Shoes-vine-charcoal.jpg" style="width:100%" onclick="onClick(this)" alt="Shoes" oncontextmenu="return false">
       <img src="/images/Shoe-dance-charcoal.jpg" style="width:100%" onclick="onClick(this)" alt="Shoe Dance, 2018" oncontextmenu="return false">
     </div>
-  </div>
+  </div>-->
 
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+
+      <div class="mySlides fade">
+        <img src="images/Door-art-installation-1.JPG" style="width:100%" oncontextmenu="return false">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/Cityscape-2020-series-4.jpg" oncontextmenu="return false">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/Empty-pen-drawing.jpg" style="width:100%" oncontextmenu="return false">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/Door-art-installation-4.JPG" style="width:100%" oncontextmenu="return false">
+      </div>
+
     </div>
-  </div>
+
 
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'" oncontextmenu="return false">
@@ -172,7 +188,7 @@ img{cursor: pointer}
       </p>
       <hr class="w3-opacity">
       <h4 class="w3-padding-16">Technical Skills</h4>
-      <p class="w3-wide">Digital </p>
+      <p class="w3-wide">Digital Fabrication</p>
       <div class="w3-white">
         <div class="w3-container w3-padding-small w3-center w3-grey" style="width:95%">95%</div>
       </div>
@@ -185,44 +201,7 @@ img{cursor: pointer}
         <div class="w3-container w3-padding-small w3-center w3-grey" style="width:80%">80%</div>
       </div>
         <p><a href="/files/Whitney_OReardon_Resume-3.pdf" download><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button></a></p>
-      <hr class="w3-opacity">
 
-      <h4 class="w3-padding-16">How much I charge</h4>
-      <div class="w3-row-padding" style="margin:0 -16px">
-        <div class="w3-half w3-margin-bottom">
-          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-            <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-            <li class="w3-padding-16">Web Design</li>
-            <li class="w3-padding-16">Photography</li>
-            <li class="w3-padding-16">5GB Storage</li>
-            <li class="w3-padding-16">Mail Support</li>
-            <li class="w3-padding-16">
-              <h2>$ 10</h2>
-              <span class="w3-opacity">per month</span>
-            </li>
-            <li class="w3-light-grey w3-padding-24">
-              <button class="w3-button w3-white w3-padding-large">Sign Up</button>
-            </li>
-          </ul>
-        </div>
-
-        <div class="w3-half">
-          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-            <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
-            <li class="w3-padding-16">Web Design</li>
-            <li class="w3-padding-16">Photography</li>
-            <li class="w3-padding-16">50GB Storage</li>
-            <li class="w3-padding-16">Endless Support</li>
-            <li class="w3-padding-16">
-              <h2>$ 25</h2>
-              <span class="w3-opacity">per month</span>
-            </li>
-            <li class="w3-light-grey w3-padding-24">
-              <button class="w3-button w3-white w3-padding-large">Sign Up</button>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -251,42 +230,8 @@ img{cursor: pointer}
 
   <!-- Footer -->
   <footer class="w3-container w3-padding-32 w3-grey">
-    <div class="w3-row-padding">
-      <div class="w3-third">
-        <h3>INFO</h3>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-
-      <div class="w3-third">
-        <h3>BLOG POSTS</h3>
-        <ul class="w3-ul">
-          <li class="w3-padding-16 w3-hover-black">
-            <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Lorem</span><br>
-            <span>Sed mattis nunc</span>
-          </li>
-          <li class="w3-padding-16 w3-hover-black">
-            <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Ipsum</span><br>
-            <span>Praes tinci sed</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-third">
-        <h3>POPULAR TAGS</h3>
-        <p>
-          <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
-          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
-          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
-          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
-          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
-        </p>
-      </div>
-    </div>
+      <div class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
   </footer>
-
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
 
 <!-- End page content -->
 </div>
@@ -326,6 +271,34 @@ for (i = 0; i < dropdown.length; i++) {
       dropdownContent.style.display = "block";
     }
   });
+}
+
+/* For Slideshow Gallery */
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
 </script>
 
