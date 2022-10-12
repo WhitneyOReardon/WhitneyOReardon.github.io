@@ -9,7 +9,6 @@
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="index.js"></script>
 
-
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     p{font-family: "", sans-serif}
@@ -19,7 +18,6 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-  z-index: -1;
 }
 
 /* Then style the iframe to fit in the container div with full height and width */
@@ -31,7 +29,6 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
 }
 
 @media only screen and (min-width: 700px) { /*big screen*/
@@ -39,8 +36,8 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     padding: 0px 100px;
   }
   #statement{
-    font-size:18pt;
-    padding: 0px 50px;
+    font-size:16pt;
+    padding: 0px 100px;
   }
 }
 
@@ -53,20 +50,20 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   }
 }
 
-    /* _________ */
-
 img{vertical-align: middle;}
 
-/* scroll feature*/
+.backgroundBox{
+    background-color:gainsboro;
+    padding: 20px;
+}
+
+/*--scroll feature--*/
 .row{padding: 10px 15px;}
 
 div.scrollmenu {
   overflow: auto;
   white-space: nowrap;
 }
-
-
-
 
 /*--Style the sidenav links and the dropdown button--*/
 .sidenav a, .dropdown-btn {
@@ -101,6 +98,7 @@ div.scrollmenu {
   font-weight: normal;
 }
 
+
 </style>
 </head>
 
@@ -113,10 +111,10 @@ div.scrollmenu {
   <a href="/index.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
   <button class="dropdown-btn w3-bar-item w3-button w3-ripple">PORTFOLIO</button>
     <div class="dropdown-container">
-        <a href="/thesis.html" onclick="w3_close()">thesis</a>
+        <a href="#" onclick="w3_close()">thesis</a>
         <a href="/drawings.html" onclick="w3_close()">drawing</a>
         <a href="/technology.html" onclick="w3_close()">technology</a>
-        <a href="lithograph.html" onclick="w3_close()">lithograph</a>
+        <a href="/lithograph.html" onclick="w3_close()">lithograph</a>
     </div>
   <a href="/aboutme.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
   <a href="/resume.html" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>
@@ -141,27 +139,41 @@ div.scrollmenu {
   <div class="w3-hide-large" style="margin-top:83px"></div>
 
     <!-- Scroll Photos start -->
-    <h1>Technology</h1>
+    <h1>Senior Door Project</h1>
     <div class="scrollmenu">
         <div class="row" oncontextmenu="return false">
-        <img src="/images/concretePrinter1.JPG" style="width: 75%" alt="">
-        <img src="/images/concretePrinter2.JPG" style="width: 75%" alt="">
-        <img src="/images/concretePrinter3.JPG" style="width: 75%" alt="">
-        <img src="/images/concretePrinter4.JPG" style="width: 75%" alt="">
-        <img src="/images/concretePrinter5.JPG" style="width: 75%" alt="">
+        <img src="/images/Door-art-installation.jpg" style="width: 75%" alt="">
+        <img src="/images/Door-art-installation-1.JPG" style="width: 75%" alt="">
+        <img src="/images/Door-art-installation-2.JPG" style="width: 75%" alt="">
+        <img src="/images/Door-art-installation-3.JPG" style="width: 75%" alt="">
+        <img src="/images/Door-art-installation-4.JPG" style="width: 75%" alt="">
         </div>
     </div>
 
     <div class="row"> <!-- use same alignment as 'row' class -->
-        <p id="caption" style="text-align: justify"><b>Drawing Machine Prototype:</b> During a summer internship with sculpture professor, Kelly Goff, I designed, constructed, and programmed a 2D drawing machine. This was a prototype for a 3D concrete printer, which I researched different building methods for.</p>
+        <p id="caption" style="text-align: justify"><b>Senior Doors Project:</b> As a Visual Arts major, my capstone project involved collecting and repurposing old doors for a sculpture installation. This endeavor was a culmination of artistic exploration of the past four years and was presented in the Beard and Weil Galleries for the Class of 2022 Senior Exhibition, <i>@Capacity</i>. For this series, I was awarded the Miriam F. Carpenter Prize in Visual Art for best body of work in one area of Visual Art.</p>
+
+        <br><br>
+
+    <div class="backgroundBox">
+      <h1>Artist Statement</h1>
+        <p id="statement" style="text-align: left">My inner world is a state of negotiations between opposites such as past and future, rationality and intuition, and chaos and order. However, something that remains constant is my highly tactile process for making. The feeling of holding and transforming physical materials is essential to my creative practice. I believe that meaning is created through the act of doing. The act of drawing patterns, the act of chiseling wood, the act of hammering through a surface is meaningful because I do it.
+        <br><br>
+        Through the pairing of order and chaos in senseless patterns, I represent opposites, double meanings, and dual possibilities. Doors hold multiple significances as pathways/barriers, entrances/exits, choices/limitations, etc. I love the dual symbolism embedded in these structures, as it is a great way to explore aspects of my own identity.
+        <br><br>
+        I think a lot about contradictions, things that shouldn’t exist simultaneously, and yet do. One contradiction that I see in my own life is the presence of my intuitive, creative side and my interest in mathematics and strict logic. In creating my doors, I utilize multiple methods of making. Sometimes I begin transforming a door without knowing where I’m headed, other times I have detailed sketches drawn out in advance.
+        <br><br>
+        The ways I transform these doors reflect my interests in architecture, history, and geometry. With each door, I also draw on my lived experiences. Some are literal moments, like the memory of my childhood home being demolished, or are abstract thoughts I wrestle with, such as trying to make sense of the absurd. These discarded and repurposed doors also contain histories of their own which tie into my interactions with the world around me. I am drawn to both the architectural utility of doors and the mystery of what lies beyond. Through this medium, I create a forest filled with contradiction, deconstruction, and self-exploration in an attempt to make sense of my internal and external worlds.</p>
+    </div>
 
       <div class="w3-padding-24">
+        <p>For an immersive, 3D veiwing experience please see below.<br> This is a shared exhibition and the descriptions for my doors are found on tabs 20, 21, and 22.</p>
 
         <div class="videocontainer">
-        <video class="responsive-iframe" loading="lazy" src="" frameborder="0" allowfullscreen allow="xr-spatial-tracking" ></video>
+        <iframe class="responsive-iframe" loading="lazy" src="https://my.matterport.com/show/?play=1&share=0&wh=0&m=JqarbTHqDyc&sr=-2.28%2C.53&ss=17&tag=ZlkrQmIX2FT&pin-pos=5.91%2C.34%2C-8.32" frameborder="0" allowfullscreen allow="xr-spatial-tracking" ></iframe>
 
+        <!-- simple URL https://my.matterport.com/show/?m=JqarbTHqDyc -->
         </div>
-
       </div>
 
     </div>
@@ -182,6 +194,7 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
+
 
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");

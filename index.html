@@ -12,7 +12,7 @@
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
-img{cursor: pointer}
+img{cursor:auto}
 
 .row {
   display: flex;
@@ -44,8 +44,6 @@ img{cursor: pointer}
 }
 
 /*-- Slideshow container --*/
-
-
 
 
 /*--Style the sidenav links and the dropdown button--*/
@@ -95,9 +93,10 @@ img{cursor: pointer}
   <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
   <button class="dropdown-btn w3-bar-item w3-button w3-ripple">PORTFOLIO</button>
     <div class="dropdown-container">
+        <a href="/thesis.html" onclick="w3_close()">thesis</a>
         <a href="/drawings.html" onclick="w3_close()">drawing</a>
-        <a href="/sculpture.html" onclick="w3_close()">sculpture</a>
         <a href="/technology.html" onclick="w3_close()">technology</a>
+        <a href="lithograph.html" onclick="w3_close()">lithograph</a>
     </div>
   <a href="/aboutme.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
   <a href="/resume.html" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>
@@ -145,22 +144,22 @@ img{cursor: pointer}
 
 
     <!-- Slideshow container -->
-    <div class="slideshow-container">
+    <div id="slideshow">
       <!-- Full-width images with number and caption text -->
 
-      <div class="mySlides fade">
+      <div class="">
         <img src="images/Door-art-installation-1.JPG" style="width:100%" oncontextmenu="return false">
       </div>
 
-      <div class="mySlides fade">
+      <div class="w3-hide">
         <img src="images/Cityscape-2020-series-4.jpg" oncontextmenu="return false">
       </div>
 
-      <div class="mySlides fade">
+      <div class="w3-hide">
         <img src="images/Empty-pen-drawing.jpg" style="width:100%" oncontextmenu="return false">
       </div>
 
-      <div class="mySlides fade">
+      <div class="w3-hide">
         <img src="images/Door-art-installation-4.JPG" style="width:100%" oncontextmenu="return false">
       </div>
 
@@ -182,7 +181,7 @@ img{cursor: pointer}
     <img src="/images/Whitney-OReardon-profile.jpg" alt="Me" class="w3-image w3-padding-64" width="300" oncontextmenu="return false">
     <div class="w3-content w3-justify" style="max-width:600px">
       <h4>Whitney O'REARDON</h4>
-      <p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+      <p>Some text about me. lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
         dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
@@ -273,33 +272,8 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 
-/* For Slideshow Gallery */
-let slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
 </script>
 
 

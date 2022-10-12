@@ -11,8 +11,42 @@
 
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    p{font-family: "", sans-serif}
+* {box-sizing: border-box}
 
-/* Style the sidenav links and the dropdown button */
+@media only screen and (min-width: 700px) { /*big screen*/
+  #caption{
+    padding: 0px 100px;
+  }
+  #statement{
+    font-size:16pt;
+    padding: 0px 80px;
+  }
+}
+
+@media only screen and (max-width: 700px) { /*little screen*/
+  #statement{
+    font-size:14pt;
+  }
+}
+
+img{vertical-align: middle;}
+
+.backgroundBox{
+    background-color:gainsboro;
+    padding: 20px;
+}
+
+
+/*--scroll feature--*/
+.row{padding: 10px 15px;}
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+/*--Style the sidenav links and the dropdown button--*/
 .sidenav a, .dropdown-btn {
   padding: 6px 8px 6px 16px;
   text-decoration: inherit;
@@ -45,6 +79,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   font-weight: normal;
 }
 
+
 </style>
 </head>
 
@@ -60,7 +95,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <a href="/thesis.html" onclick="w3_close()">thesis</a>
         <a href="/drawings.html" onclick="w3_close()">drawing</a>
         <a href="/technology.html" onclick="w3_close()">technology</a>
-        <a href="lithograph.html" onclick="w3_close()">lithograph</a>
+        <a href="/lithograph.html" onclick="w3_close()">lithograph</a>
     </div>
   <a href="/aboutme.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
   <a href="/resume.html" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>
@@ -79,13 +114,45 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main w3-container w3-center" style="margin-left:300px">
+<div class="w3-main w3-container w3-center w3-padding-24" style="margin-left:300px">
 
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
 
+    <!-- Scroll Photos start -->
+    <h1>Distances: a print installation</h1>
+        <div class="scrollmenu">
+            <div class="row" oncontextmenu="return false">
+            <img src="https://drive.google.com/uc?export=view&id=1DZPuUncJTIsCu8KceRCTUPJc4PiFEhs2" style="width: 85%" alt="">
+            </div>
+        </div>
 
-        <p><a href="/files/Whitney_OReardon_Resume-3.pdf" download><button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button></a></p>
+    <div class="row"> <!-- use same alignment as 'row' class -->
+        <p id="caption" style="text-align: justify">At the Burren College of Art in Ballyvaughn, Ireland I was inspired by the Irish landscape to make a collage of lithograph prints.</p>
+
+        <br><br>
+
+      <div class="backgroundBox">
+      <h2>Artist Statement</h2>
+        <p id="statement" style="text-align: left">Landscapes give us the power to see our future. Without these sightlines we have no way to see where we are or where we’re going. My work is inspired by the vast landscapes all around the Burren. I’m drawn to these horizon lines because they help to ground me in the present. With my surroundings unobstructed by buildings or trees, I can find my bearings and take note of my immediate reality. Simultaneously, I can peer into my future as I contemplate what comes after my visible path.
+        <br><br>
+        My artwork is composed of lithographic prints, torn and layered together. I chose this medium because I like the tactile process of printmaking which involves multiple steps of drawing, inking a plate, and pulling prints. Each image reveals scenes that I’ve replicated from sites around the Burren. I’m especially drawn toward natural and human-made stone structures. The pointed archways are a recurring motif in my art as they signify wonder and exploration. After printing, I tore the images to create textured fragments which I constructed into multiple landscapes. With horizon lines crossing over each other, I am bringing together the places I’ve been and hope to go.</p>
+      </div>
+
+    <br><br>
+    <h2>Process photos</h2>
+        <div class="scrollmenu">
+            <div class="row" oncontextmenu="return false">
+            <img src="https://drive.google.com/uc?export=view&id=1hnV45UKA-ekFpWkHPU7izQT-BLU_b0hm" style="width: 50%; margin-left: 10px;" alt="">
+            <img src="https://drive.google.com/uc?export=view&id=1vd_62e_w_39lDOyPD8UbPs94mvesOUOL" style="width: 50%; margin-left: 10px;" alt="">
+            <img src="https://drive.google.com/uc?export=view&id=1K-1F7j1hXSrAD2kvTLBamwXb1H3W-5zK" style="width: 80%; margin-left: 10px;" alt="">
+            <img src="https://drive.google.com/uc?export=view&id=1xKKz9ZG2djL9Ah-cWzYgJnGRXqEfRpg8" style="width: 80%; margin-left: 10px;" alt="">
+            </div>
+        </div>
+
+
+    </div>
+
 </div>
 
 
@@ -102,6 +169,7 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
+
 
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");
