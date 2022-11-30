@@ -8,56 +8,29 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="index.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
-img{cursor:auto}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 50px 15px;
+.videocontainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 75%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0px 5px;
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.column img {
-  margin: 5px 0px;
-  vertical-align: middle;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-  .row{
-    padding: 20px 15px;
-  }
-}
-
-/*-- Slideshow --*/
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-    width: 100%;
-    margin: auto;
-  }
-  .carousel-caption {
-    color: whitesmoke;
-  }
-
-
-/*--Style the sidenav links and the dropdown button--*/
+/* Style the sidenav links and the dropdown button */
 .sidenav a, .dropdown-btn {
   padding: 6px 8px 6px 16px;
   text-decoration: inherit;
@@ -70,6 +43,12 @@ img{cursor:auto}
   text-align: center;
   cursor: pointer;
   outline: none;
+}
+
+@media only screen and (max-width: 700px) { /*little screen*/
+  .videocontainer {
+    height: 600px;
+  }
 }
 
 /* Add an active class to the active dropdown button */
@@ -90,302 +69,55 @@ img{cursor:auto}
   font-weight: normal;
 }
 
-
 </style>
 </head>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
-
 <!-- Sidebar/menu -->
 <nav class="sidenav w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
-  <h3 class="w3-padding-64 w3-center"><b>Whitney<br>O'Reardon</b></h3>
+  <h3 class="w3-padding-64 w3-center"><b>WHITNEY<br>O'Reardon</b></h3>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
-  <button class="dropdown-btn w3-bar-item w3-button w3-ripple">PORTFOLIO</button>
-    <div class="dropdown-container">
-        <a href="/thesis.html" onclick="w3_close()">thesis</a>
-        <a href="/drawings.html" onclick="w3_close()">drawing</a>
-        <a href="/technology.html" onclick="w3_close()">technology</a>
-        <a href="lithograph.html" onclick="w3_close()">lithograph</a>
-    </div>
-  <a href="/aboutme.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="/index.html" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a>
   <a href="/resume.html" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>
-  <a href="/aboutme.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="/aboutme.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
 </nav>
+
+
 
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
-  <span class="w3-left w3-padding">Whitney O'Reardon</span>
+  <span class="w3-left w3-padding">W. O'REARDON</span>
   <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
+
+
+
+
+
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
+<div class="w3-main w3-container w3-center" style="margin-left:300px">
 
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
-
-  <!-- Photo grid
-  <div class="row">
-    <div class="column">
-      <img src="/images/Cityscape-2020-series-3.jpg" style="width:100%" onclick="onClick(this)" alt="Cityscape 2020, Part 3" oncontextmenu="return false">
-      <img src="/images/Empty-pen-drawing.jpg" style="width:100%" onclick="onClick(this)" alt="A Day in the Life, 2020" oncontextmenu="return false">
-      <img src="/images/Enchanted-room-pumpkins.jpg" style="width:100%" onclick="onClick(this)" alt="Enchanted Room, 2019. Plaster cast pumpkin installation" oncontextmenu="return false">
+    <br>
+    <div class="videocontainer">
+        <iframe class="responsive-iframe" loading="lazy" src="https://drive.google.com/file/d/1XzkccNT5JvPrvEaVdf_NOyD5830y1-wa/preview" allow="autoplay"></iframe>
     </div>
 
-    <div class="column">
-      <img src="/images/Door-art-installation.jpg" style="width:100%" onclick="onClick(this)" alt="Door Project, 2022. Wheaton College MA, Beard and Weil Galleries" oncontextmenu="return false">
-      <img src="/images/Reflections-self-portrait.jpg" style="width:100%" onclick="onClick(this)" alt="Self Portrait" oncontextmenu="return false">
-    </div>
-
-    <div class="column">
-      <img src="/images/Cityscape-2020-series-1.jpg" style="width:100%" onclick="onClick(this)" alt="Cityscape 2020, Part 1" oncontextmenu="return false">
-      <img src="/images/Texture-study-pots.jpg" style="width:100%" onclick="onClick(this)" alt="Texture Study with Pots, 2018" oncontextmenu="return false">
-    </div>
-
-    <div class="column">
-      <img src="/images/Shoes-vine-charcoal.jpg" style="width:100%" onclick="onClick(this)" alt="Shoes" oncontextmenu="return false">
-      <img src="/images/Shoe-dance-charcoal.jpg" style="width:100%" onclick="onClick(this)" alt="Shoe Dance, 2018" oncontextmenu="return false">
-    </div>
-  </div>-->
-
-  <!-- Modal for full size images on click
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'" oncontextmenu="return false">
-    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>-->
-
-
-    <!-- Slideshow container -->
-<div class="w3-dark-grey">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-      <li data-target="#myCarousel" data-slide-to="4"></li>
-      <li data-target="#myCarousel" data-slide-to="5"></li>
-      <li data-target="#myCarousel" data-slide-to="6"></li>
-      <li data-target="#myCarousel" data-slide-to="7"></li>
-      <li data-target="#myCarousel" data-slide-to="8"></li>
-      <li data-target="#myCarousel" data-slide-to="9"></li>
-      <li data-target="#myCarousel" data-slide-to="10"></li>
-      <li data-target="#myCarousel" data-slide-to="11"></li>
-      <li data-target="#myCarousel" data-slide-to="12"></li>
-      <li data-target="#myCarousel" data-slide-to="13"></li>
-      <li data-target="#myCarousel" data-slide-to="14"></li>
-      <li data-target="#myCarousel" data-slide-to="15"></li>
-      <li data-target="#myCarousel" data-slide-to="16"></li>
-      <li data-target="#myCarousel" data-slide-to="17"></li>
-      <li data-target="#myCarousel" data-slide-to="18"></li>
-      <li data-target="#myCarousel" data-slide-to="19"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-
-      <div class="item active">
-        <img src="images/Door-art-installation-1.JPG" alt="Doors Project" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Modern logic, 2022</h3>
-          <p>Found door, wood, chalk, charcoal, acrylic, 80 x 62 x 24 in.</p>
-        </div>
-      </div>
-
-      <div class="item" 1>
-        <img src="images/Door-art-installation-3.JPG" alt="Doors Project" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Demolition notice, 2021-22</h3>
-          <p>Found doors, wallpaper, screws, caulk, acrylic, chalk, 78 x 52 x 22 in.</p>
-        </div>
-      </div>
-
-      <div class="item" 2>
-        <img src="images/Door-art-installation-4.JPG" alt="Doors Project" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Natural forms, 2022</h3>
-          <p>Found wooden doors, miscellaneous hardware, 79 ½ x 52 x 20 in.</p>
-        </div>
-      </div>
-
-      <div class="item" 3>
-        <img src="images/Door-art-installation.jpg" alt="Doors Project" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Thesis work, 2022</h3>
-          <p>Installed in the Beard & Weil Gallery, Wheaton College.</p>
-        </div>
-      </div>
-
-      <div class="item" 4>
-        <img src="https://drive.google.com/uc?export=view&id=1OP9yWnLAc6oMHDHyqYqq1_z7gBfPGhKH" alt="sculpture made from wooden chair" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Back to its roots, 2019</h3>
-          <p>Wooden chair, rope, acrylic, 2 x 1½ x 3 ft.</p>
-        </div>
-      </div>
-
-      <div class="item" 5>
-        <img src="https://drive.google.com/uc?export=view&id=196KBtsCmqa4ttu3wYWa8e9LzWlQ08juF" alt="sculpture made from laser cut cardboard" max-height=100%>
-        <div class="carousel-caption">
-          <h3>untitled, 2021</h3>
-          <p>Laser cut cardboard, 11 x 8 x 17 in.</p>
-        </div>
-      </div>
-
-      <div class="item" 6>
-        <img src="https://drive.google.com/uc?export=view&id=1fTvdJQIs5P_-ZWj9ZdyVmGmL0dSCh7Q6" alt="plaster pumpkins in room" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Enchanted room, 2019</h3>
-          <p>Plaster casts, art installation in Wallace Library.</p>
-        </div>
-      </div>
-
-      <div class="item" 7>
-        <img src="images/Cityscape-2020-series-1.jpg" alt="Cityscape 2020, part 1" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Cityscape 2020, Part 1</h3>
-          <p>Charcoal on paper, 24 x 18 in.</p>
-        </div>
-      </div>
-
-      <div class="item" 8>
-        <img src="images/Cityscape-2020-series-2.jpg" alt="Cityscape 2020, part 2" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Cityscape 2020, Part 2</h3>
-          <p>Charcoal on paper, 14 x 17 in.</p>
-        </div>
-      </div>
-
-      <div class="item" 9>
-        <img src="images/Cityscape-2020-series-3.jpg" alt="Cityscape 2020, part 3" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Cityscape 2020, Part 3</h3>
-          <p>Charcoal on paper, 14 x 17 in.</p>
-        </div>
-      </div>
-
-      <div class="item" 10>
-        <img src="images/Cityscape-2020-series-4.jpg" alt="Cityscape 2020, part 4" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Cityscape 2020, Part 4</h3>
-          <p>Charcoal on paper, 24 x 18 in.</p>
-        </div>
-      </div>
-
-      <div class="item" 11>
-        <img src="https://drive.google.com/uc?export=view&id=1DZPuUncJTIsCu8KceRCTUPJc4PiFEhs2" alt="lithograph print collage" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Horizons, 2022</h3>
-          <p>Color lithographs on paper & newsprint, collage 7 x 3 ½ ft.</p>
-        </div>
-      </div>
-
-      <div class="item" 12>
-        <img src="images/Empty-pen-drawing.jpg" alt="Dining views, 2020" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Dining views, 2020</h3>
-          <p>Pen on paper, 24 x 18 in.</p>
-        </div>
-      </div>
-
-      <div class="item" 13>
-        <img src="https://drive.google.com/uc?export=view&id=1nIO4g68XdYjV1c2JK_fQDvMqqVzvbDIN" alt="wooden geometric construction" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Hexapod, 2021</h3>
-          <p>Plywood, acrylic sheets, PLA plastic, 5 x 5 x 4 ft.</p>
-        </div>
-      </div>
-
-      <div class="item" 14>
-        <img src="https://drive.google.com/uc?export=view&id=1h6z-dRy46G4q9YKHZnooeNB_ziS8aI9R" alt="wooden geometric construction with string lights" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Hexapod (continued), 2021</h3>
-          <p>Made in a 2-person collaboration.</p>
-        </div>
-      </div>
-      <div class="item" 15>
-        <img src="images/concretePrinter1.JPG" alt="wooden frame machine" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Drawing machine prototype, 2021</h3>
-          <p>Researched, designed, built, and programmed a 2-axis CNC, 4 x 3½ x 3 ft.</p>
-        </div>
-      </div>
-
-      <div class="item" 16>
-        <img src="https://drive.google.com/uc?export=view&id=1BVBFr7P2NXzVSDFBP5XN6Ie9OoPGHsYD" alt="Set design for 'Colored Museum'" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Set design for <i>Colored Museum</i>, 2020</h3>
-          <p>Pencil on tracing paper, 11 x 8½ ft.</p>
-        </div>
-      </div>
-
-      <div class="item" 17>
-        <img src="https://drive.google.com/uc?export=view&id=15Xe79Hjh_GKtlL0dSiNvzdGNFouLqGes" alt="Set design for 'Colored Museum'" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Set design for <i>Colored Museum</i>, 2020</h3>
-          <p>Watercolor and color pencil on paper, 11 x 8½ ft.</p>
-        </div>
-      </div>
-
-      <div class="item" 18>
-        <img src="https://drive.google.com/uc?export=view&id=1ucK9fLDiLu4bow5-OcamCIfSQk9hmAWp" alt="Set design storyboards for A Normal Heart" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Set design storyboards for <i>A Normal Heart</i>, 2020</h3>
-          <p>Scenes 1.1 - 1.4</p>
-        </div>
-      </div>
-
-      <div class="item" 19>
-        <img src="https://drive.google.com/uc?export=view&id=1t_HpWbbZK7WNBPFYlOo6mV-J_ERMYU35" alt="Set design storyboards for A Normal Heart" max-height=100%>
-        <div class="carousel-caption">
-          <h3>Set design storyboards for <i>A Normal Heart</i>, 2020</h3>
-          <p>Scenes 1.5 - 1.7, 2.8</p>
-        </div>
-      </div>
-
-    </div>
-
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
 </div>
 
 
-  <!-- About section -->
-  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
-    <!-- <h4><b>About Me</b></h4> -->
-    <div class="w3-content w3-justify" style="max-width:600px">
-      <h4>Whitney O'REARDON</h4>
-      <p>I graduated from Wheaton College MA in 2022 where I majored visual art and art history with a minor in math. My portfolio reveals the curiosities and explorations that propel me in creating my work. History, technology, and geometry are a just few things that shape my approach to architecture.
-      </p>
 
-    </div>
-  </div>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-grey">
-      <div class="w3-center">Copyright © All rights reserved.</div>
-  </footer>
+
+
 
 <!-- End page content -->
-</div>
 
 <script>
 // Script to open and close sidebar
@@ -398,15 +130,6 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
 
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -423,8 +146,6 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }
-
-
 
 </script>
 
